@@ -41,3 +41,11 @@ Set PAGE back to the address in (1)
 Run the refactoring code and enter the address of the source code you set in (2)
 
 This worked on the Beeb, up to a point, as far as I can remember, but 35 years later it's still a work in progress. None of the emulators I've tried seem to be able to cope with such hackery. I hope it's at least interesting from an academic or intellectual perspective. To my 14 year old mind, it was just a challenge that was more interesting than homework.
+
+MYSTERY MEAT
+LineLOK.bas
+UnLOK.bas
+These utils are essential if you want to... lock lines? And unlock them again? To be honest, I can't remember what these do, but probably something to do with software protection. If you can work it out, please let me know.
+
+Recover.bas
+This recovers a program in memory. From what? Haven't a clue, but I'm sure it was useful at the time.
