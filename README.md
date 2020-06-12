@@ -16,3 +16,27 @@ It's an attempt to force the speech emulator to pronounce German sentences corre
 and numbers into their British English equivalents.
 It's by no means complete - for one thing it only copes with numbers up to 20 and doesn't recognise umlauts, but it's surprisingly effective 
 for simple phrases.
+
+Expand.bas
+As a young hacker, most of my code looked like a cat had a party on the keyboard. It was a point of pride for me to cram every available character
+of code that the OS would allow into a single line, at the expense of any and all code readability.
+My teachers, on the other hand, resented how much the headache pills were costing, and would only accept neat, readable code.
+What to do?
+So, I wrote a code refactoring program. It takes a jumbled mess of spaghetti code and converts it to one instruction per line with orderly line numbers.
+
+To use, load your source program into a different page:
+
+1.
+PRINT ~PAGE: REM Make a note of the current page.
+2.
+PAGE=&1D00: REM Either set the page to a known free location below HIMEM
+PAGE=TOP+&100: REM or set it above the top of the refactoring code.
+3.
+Load or write your code into the new location in memory.
+4.
+Set PAGE back to the address in (1)
+5.
+Run the refactoring code and enter the address of the source code you set in (2)
+
+This worked on the Beeb, up to a point. Emulators seem to struggle with it, but 35 years later it's still a work in progress.
+I hope it's at least interesting from an academic point of view.
