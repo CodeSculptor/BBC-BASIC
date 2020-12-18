@@ -26,29 +26,27 @@ My teachers, on the other hand, resented how much the headache pills were costin
 What to do?
 So, I wrote a code refactoring program to facilitate my filthy coding habits. It takes a jumbled mess of spaghetti code and converts it to one instruction per line with orderly line numbers.
 
-To use, load your source program into a different page:
+To use, first load your source program, then load Xpander into a different page:
 
+1.LOAD "your_program"
 1.
 PRINT ~PAGE: REM Make a note of the current page.
 2.
 PAGE=&1D00: REM Either set the page to a known free location below HIMEM
-PAGE=TOP+&100: REM or set it above the top of the refactoring code.
+PAGE=TOP+&400: REM or set it above the top of the refactoring code.
 3.
-Load or write your code into the new location in memory.
+CHAIN "xpand": REM Load the expander into the new location in memory.
 4.
-Set PAGE back to the address in (1)
-5.
-Run the refactoring code and enter the address of the source code you set in (2)
+Enter the PAGE value from (1)
 
-This worked on the Beeb, up to a point, as far as I can remember, but 35 years later it's still a work in progress. None of the emulators I've tried seem to be able to cope with such hackery. I hope it's at least interesting from an academic or intellectual perspective. To my 14 year old mind, it was just a challenge that was more interesting than homework.
+This worked on the Beeb, up to a point, as far as I can remember, but 35 years later it's still a work in progress. I've tested it in BeebEm with some success. I hope it's at least interesting from an academic or intellectual perspective. To my 14 year old mind, it was just a challenge that was more interesting than homework.
 
 Toolkit.bas
 A set of utils to work with ROMs, disassemble code, hex dumps, and other fun stuff. Honestly, I don't even remember writing this, and it's possible I didn't. I wrote a lot of stuff when I was young, and now I'm old and forgetful.
 
-MYSTERY MEAT
 LineLOK.bas
 UnLOK.bas
-These utils are essential if you want to... lock lines? And unlock them again? To be honest, I can't remember what these do, but probably something to do with software protection. If you can work it out, please let me know.
+LineLOK provides software protection by disabling editing, including deleting/overwriting lines and renumbering. UnLOK reverses the process. To run, follow the instructions for Expand.bas for loading the tools into a different page. 
 
 Recover.bas
 This recovers a program in memory. From what? Haven't a clue, but I'm sure it was useful at the time.
